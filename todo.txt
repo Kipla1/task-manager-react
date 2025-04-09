@@ -1,0 +1,14 @@
+- header for the app -- done 
+- sub heading -- done
+- components for -- done
+1. Task.jsx -- done
+2. TaskList.jsx -- done
+3. TaskInputForm.jsx -- done
+4. Footer.jsx -- volunteers
+
+- list of tasks -- done
+- imports and exports work -- done
+- props -- done 
+- props destructuring -- done
+- array of tasks
+- lists and keys
