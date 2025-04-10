@@ -12,3 +12,8 @@
 - props destructuring -- done
 - array of tasks
 - lists and keys
+
+- events - onClick, onChange, onSubmit
+--> forms reload by default when submitted
+--> preventDefault() --> prevents page reload when you submit a form 
+- state

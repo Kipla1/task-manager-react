@@ -3,19 +3,19 @@ import Task from './Task';
 
 const tasks = [
   {
-    // id: 1,
+    id: 1,
     title: 'Task 1',
     description: 'This is the first task.',
     completed: false,
   },
   {
-    // id: 2,
+    id: 2,
     title: 'Task 2',
     description: 'This is the second task.',
     completed: true,
   },
   {
-    // id: 3,
+    id: 3,
     title: 'Task 3',
     description: 'This is the third task.',
     completed: false,
@@ -36,7 +36,7 @@ const tasks = [
 
 function TaskList() {
   const mappedData = tasks.map((task) => {
-    console.log(task);
+    // console.log(task);
     return (
       <Task key={task.id} title={task.title} description={task.description} />
     );
