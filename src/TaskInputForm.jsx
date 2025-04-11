@@ -10,12 +10,15 @@ function TaskInputForm() {
       <form className='task-form'>
         <input type='text' placeholder='Title' className='input' />
         <textarea placeholder='Description' className='input textarea' />
-        <button type='submit' className='btn add-btn' onClick={handleClick}>
+        <button
+          type='submit'
+          className='btn add-btn'
+          onClick={handleClick} // option 1
+          // onClick={() => handleClick()} // option 2
+          // onClick={handleClick()} // this doesn't work
+        >
           Add Task
         </button>
-        {/* <button type='submit' className='btn add-btn' onClick={handleClick()}>
-          Add Task
-        </button> */}
       </form>
     </>
   );
