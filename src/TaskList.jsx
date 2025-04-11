@@ -36,7 +36,6 @@ const tasks = [
 
 function TaskList() {
   const mappedData = tasks.map((task) => {
-    // console.log(task);
     return (
       <Task key={task.id} title={task.title} description={task.description} />
     );
@@ -44,11 +43,6 @@ function TaskList() {
 
   return (
     <div className='task-list'>
-      {/* <Task title='task title trial' description='task description trial' />
-       <Task title={title} description={description} /> 
-       <Task />
-      <Task />
-      <Task /> */}
       {/* map over our array of tasks */}
       {mappedData}
     </div>
