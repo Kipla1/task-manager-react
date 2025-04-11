@@ -16,4 +16,5 @@
 - events - onClick, onChange, onSubmit
 --> forms reload by default when submitted
 --> preventDefault() --> prevents page reload when you submit a form 
-- state
+- state -- done
+- add a new task to the UI -- done
