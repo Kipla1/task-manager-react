@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import TaskInputForm from './TaskInputForm';
 import TaskList from './TaskList';
+import Footer from './Footer';
 
 const myTasks = [
   {
@@ -50,6 +51,7 @@ function App() {
       <TaskInputForm addTask={addTask} />
       <h2>Task List</h2>
       <TaskList tasks={tasks} />
+      <Footer/>
     </div>
   );
 }
