@@ -18,3 +18,5 @@
 --> preventDefault() --> prevents page reload when you submit a form 
 - state -- done
 - add a new task to the UI -- done
+- useEffect - handles side effects in react
+- 
