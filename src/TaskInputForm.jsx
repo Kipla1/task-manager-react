@@ -3,6 +3,7 @@ import { useState } from 'react';
 function TaskInputForm({ addTask }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleClick = (event) => {
     event.preventDefault();
@@ -37,11 +38,10 @@ function TaskInputForm({ addTask }) {
         <button
           type='submit'
           className='btn add-btn'
+          disabled={isSubmitting}
           onClick={handleClick} // option 1
-          // onClick={() => handleClick()} // option 2
-          // onClick={handleClick()} // this doesn't work
         >
-          Add Task
+          {isSubmitting ? 'Adding Task...' : 'Add Task'}
         </button>
       </form>
     </>
