@@ -3,6 +3,7 @@ import './App.css';
 import TaskInputForm from './TaskInputForm';
 import TaskList from './TaskList';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 function App() {
   const apiUrl = 'http://localhost:3000/tasks';
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <h1>Gladiator's Task Manager</h1>
       <TaskInputForm addTask={addTask} />
       <h2>Task List</h2>

@@ -7,16 +7,34 @@ function TaskInputForm({ addTask }) {
 
   const handleClick = (event) => {
     event.preventDefault();
+    setIsSubmitting(true);
 
     const newTask = {
-      id: Math.floor(Math.random() * 1000), // Generate a random ID
       title: title,
       description: description,
       completed: false,
     };
 
-    console.log(newTask);
-    addTask(newTask);
+    fetch('http://localhost:3000/tasks', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newTask),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        addTask(data);
+        setTitle('');
+        setDescription('');
+        setTimeout(() => {
+          setIsSubmitting(false);
+        }, 1000);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsSubmitting(false);
+      });
   };
 
   return (
