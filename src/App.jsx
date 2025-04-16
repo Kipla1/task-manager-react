@@ -3,27 +3,18 @@ import './App.css';
 import TaskInputForm from './TaskInputForm';
 import TaskList from './TaskList';
 import Footer from './Footer';
-// import { myTasks } from './tasks';
 
 function App() {
   const apiUrl = 'http://localhost:3000/tasks';
   const [tasks, setTasks] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // at the point of loading, this is true
-  // const [isLoaded, setIsLoaded] = useState(false); // at the point of loading, this is false
-
-  // console.log(tasks);
 
   console.log('trial 1');
 
   useEffect(() => {
-    // logic here for side effects
-    // like fetching data from an API or local storage
-    // console.log('Component mounted or updated');
-
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
         setTasks(data);
         setTimeout(() => {
           setIsLoading(false);
@@ -48,7 +39,6 @@ function App() {
       <TaskInputForm addTask={addTask} />
       <h2>Task List</h2>
       {isLoading ? <>Loading...</> : <TaskList tasks={tasks} />}
-      {/* <TaskList tasks={tasks} /> */}
       <Footer />
     </div>
   );
