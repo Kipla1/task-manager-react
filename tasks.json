@@ -4,7 +4,7 @@
       "id": "1",
       "title": "Buy groceries",
       "description": "Milk, Bread, Eggs, and Fruits",
-      "completed": true
+      "completed": false
     },
     {
       "id": "2",
